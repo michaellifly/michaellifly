@@ -4,7 +4,17 @@
       "Read(//e/GT_Repo//**)",
       "Read(//e/GT_Repo/**)",
       "Bash(gh api:*)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:github-profile-trophy.vercel.app)",
+      "WebFetch(domain:github-profile-trophy-liard-delta.vercel.app)",
+      "WebFetch(domain:github-profile-trophy-fork-two.vercel.app)",
+      "WebFetch(domain:github-profile-trophy-winning.vercel.app)",
+      "WebFetch(domain:trophy.ryglcloud.net)",
+      "WebFetch(domain:gh-trophy.cdnsoft.net)",
+      "WebFetch(domain:trophygh.kolioaris.xyz)",
+      "WebFetch(domain:github-readme-stats.vercel.app)",
+      "WebFetch(domain:github-stats-alpha.vercel.app)",
+      "WebFetch(domain:img.shields.io)"
     ]
   }
 }
