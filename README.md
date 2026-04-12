@@ -85,7 +85,7 @@ me.say_hi()
 ## 🏆 GitHub Trophies
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=michaellifly&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=4" alt="Trophies"/>
+  <img src="https://github-profile-trophy.vercel.app/?username=michaellifly&theme=tokyonight&no-frame=true&no-bg=true&column=6&margin-w=4" alt="Trophies"/>
 </div>
 
 ---
