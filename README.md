@@ -102,9 +102,23 @@ me.say_hi()
 
 <div align="center">
 
-[![Data Analyst Nanodegree](https://github-readme-stats.vercel.app/api/pin/?username=michaellifly&repo=Data-analyst-nanodegree-project&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=58a6ff)](https://github.com/michaellifly/Data-analyst-nanodegree-project)
+<a href="https://github.com/michaellifly/Data-analyst-nanodegree-project">
+  <img src="https://img.shields.io/badge/📊_Data_Analyst_Nanodegree_Project-View_Repo-58a6ff?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117" />
+</a>
 &nbsp;
-[![Michael Remote](https://github-readme-stats.vercel.app/api/pin/?username=michaellifly&repo=Michael_remote&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=58a6ff)](https://github.com/michaellifly/Michael_remote)
+<a href="https://github.com/michaellifly/Michael_remote">
+  <img src="https://img.shields.io/badge/🤖_Michael_Remote-View_Repo-58a6ff?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117" />
+</a>
+
+<br/>
+
+<img src="https://img.shields.io/github/languages/top/michaellifly/Data-analyst-nanodegree-project?style=flat-square&color=58a6ff" />
+<img src="https://img.shields.io/github/stars/michaellifly/Data-analyst-nanodegree-project?style=flat-square&color=58a6ff" />
+<img src="https://img.shields.io/github/forks/michaellifly/Data-analyst-nanodegree-project?style=flat-square&color=58a6ff" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://img.shields.io/github/languages/top/michaellifly/Michael_remote?style=flat-square&color=58a6ff" />
+<img src="https://img.shields.io/github/stars/michaellifly/Michael_remote?style=flat-square&color=58a6ff" />
+<img src="https://img.shields.io/github/forks/michaellifly/Michael_remote?style=flat-square&color=58a6ff" />
 
 </div>
 
