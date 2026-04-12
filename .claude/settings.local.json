@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//e/GT_Repo//**)",
+      "Read(//e/GT_Repo/**)",
+      "Bash(gh api:*)",
+      "WebFetch(domain:github.com)"
+    ]
+  }
+}
