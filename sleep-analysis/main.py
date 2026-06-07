@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-Baby Sleep Cycle Analyzer
+Baby Sleep Cycle Analyzer — Baby Tracker (Nighp) edition
 Usage:
-  python main.py                        # uses sample data
-  python main.py --file path/to/export.json
-  BT_EMAIL=x BT_PASSWORD=y python main.py --api
-  python main.py --days 7               # analyze last 7 days
+  python main.py                        # sample data (demo)
+  python main.py --db EasyLog.db        # your real database from iCloud
+  python main.py --file export.json     # JSON export file
+  python main.py --days 7               # analyze last 7 days only
+  python explore_db.py EasyLog.db       # inspect DB schema before running
 """
 
 import argparse
@@ -33,26 +34,26 @@ PRIORITY_COLOR = {1: "red", 2: "yellow", 3: "cyan"}
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Baby Sleep Cycle Analyzer")
-    parser.add_argument("--file", help="Path to Baby Tracker JSON export")
-    parser.add_argument("--api", action="store_true", help="Fetch from Baby Tracker API")
+    parser.add_argument("--db", help="Path to EasyLog.db (from iCloud or Data Clone export)")
+    parser.add_argument("--file", help="Path to JSON export file")
     parser.add_argument("--days", type=int, default=14, help="Analysis window in days (default 14)")
-    parser.add_argument("--baby", help="Baby name or ID (if account has multiple babies)")
+    parser.add_argument("--baby", help="Baby name filter (if account has multiple babies)")
+    parser.add_argument("--timezone", default=os.getenv("BT_TIMEZONE", "America/New_York"))
     return parser.parse_args()
 
 
 def build_client(args) -> BabyTrackerClient:
-    if args.api:
-        return BabyTrackerClient(
-            email=os.getenv("BT_EMAIL"),
-            password=os.getenv("BT_PASSWORD"),
-        )
-    data_file = args.file or os.getenv("BT_DATA_FILE")
-    if not data_file:
-        # Fall back to sample data
-        sample = Path(__file__).parent / "sample_data" / "sample_sleep.json"
-        data_file = str(sample)
-        console.print(f"[dim]No data source specified. Using sample data: {sample.name}[/dim]\n")
-    return BabyTrackerClient(data_file=data_file)
+    db = args.db or os.getenv("BT_DB_FILE")
+    json_file = args.file or os.getenv("BT_DATA_FILE")
+
+    if not db and not json_file:
+        console.print("[dim]No --db or --file given. Using built-in sample data.[/dim]\n")
+
+    return BabyTrackerClient(
+        db_file=db,
+        json_file=json_file,
+        timezone=args.timezone,
+    )
 
 
 def select_baby(client, name_filter=None):
@@ -163,6 +164,7 @@ def main():
     analyzer = SleepAnalyzer(baby, records)
     summaries = analyzer.daily_summaries(args.days)
     stats = analyzer.stats(args.days)
+
 
     print_header(baby, args.days)
     print_daily_table(summaries)
